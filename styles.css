@@ -33,28 +33,22 @@
     color: white;
   }
   
-  /* Slideshow Container */
+  * {box-sizing:border-box}
+
+  /* Slideshow container */
   .slideshow-container {
+    max-width: 1000px;
     position: relative;
-    width: 100%;
-    max-width: 800px; /* Slayt gösterisinin maksimum genişliği */
-    height: 300px;
-    float: left; /* Slayt gösterisini sola yasla */
+    margin: auto;
+    float:left;
   }
   
-  /* Slideshow Images */
+  /* Hide the images by default */
   .mySlides {
-    float: left;
-    width: 400px;
-    height: 300px;
+    display: none;
   }
   
-  .mySlides img {
-    width: 100%;
-    max-height: 300px;
-  }
-  
-  /* Previous & Next Buttons */
+  /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -70,21 +64,18 @@
     user-select: none;
   }
   
-  .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
+  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
+  /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption Text */
+  /* Caption text */
   .text {
     color: #f2f2f2;
     font-size: 15px;
@@ -95,12 +86,21 @@
     text-align: center;
   }
   
-  /* Dots/Circles */
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
   .dot {
     cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 5px 0; /* Noktalar arası boşluk ayarlanıyor */
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -111,23 +111,34 @@
     background-color: #717171;
   }
   
-  /* Fading Animation */
+  /* Fading animation */
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
   @keyframes fade {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+    from {opacity: .4}
+    to {opacity: 1}
   }
-
-  .dots-container {
-    position: absolute;
-    top: 50%;
-    right: 20px; /* Slayt gösterisi ile arasında boşluk bırakmak için */
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .dotcontainer{
+ 
+    position:absolute;
+    margin:750px 450px ;
   }
+.torftime{
+    background-color: #f1f1f1;
+    margin:auto 50px auto 1050px;
+    border: solid black;
+}
+  .torfyazisi{
+    font-size: 150px;
+    position: center;
+    text-align: center;
+    padding-left:5%;
+    padding-right:5%;
+  }
+.torfmetni{
+    font-size: 20px;
+    text-align:justify;
+}
